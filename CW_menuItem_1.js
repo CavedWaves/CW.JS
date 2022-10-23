@@ -75,6 +75,10 @@ function CW_menuItem_1(excute, text, link, linkType,textAlign, borderColor, Bord
     document.getElementById(excute).addEventListener("click",
         function () {
             var x = document.getElementById('CW_'+excute+'10000_menu_00001'+excute+'_Body');
-            x.appendChild(item);
+            if(x==null){
+                console.log("error : Please define a menu");
+            }else{
+                x.appendChild(item);
+            }
         });
 }
